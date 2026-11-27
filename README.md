@@ -1,15 +1,18 @@
 # Sabaq – Tutor & Academy Finder for Karachi
 
-A static, single-page web app to find tutors and academies for school, O/A Levels, MDCAT and ECAT.
+Static front end (`index.html`) plus one serverless function (`api/admin.js`) for the admin login.
 
 ## Features
-Search and filters (with Urdu and Roman Urdu terms), profiles, compare up to 3, save, demo requests, verified-only reviews, reports, WhatsApp/call/map links, smart match, fee transparency, exam countdown, mock tests, free resources, study groups, list-yourself form, admin panel, EN/اردو toggle.
-
-## Run locally
-Open `index.html` in a browser, or run `npx serve .`
+- **Students/parents:** search & filters (Urdu/Roman Urdu), compare, save, demo requests (validated, rate-limited), verified-only reviews (one per listing, moderated), reports, smart match, fees, exam countdown, mock tests, resources, study groups, notifications, EN/اردو.
+- **Tutors/academies:** sign-up, profile photo, private document upload (degree, ID, certificate), listing review workflow, verification status, request inbox (accept/decline), public replies to reviews, profile-view stats, edit and delete.
+- **Admin (`/admin`, not linked anywhere):** separate email + password login (no sign-up), review queue with document viewer and verification checklist, approve / approve & verify / reject / suspend with reasons, feature listings, user suspend/delete, review and report moderation, activity log, announcement banner, CSV export.
 
 ## Deploy on Vercel
-Import the repo in Vercel with the "Other" preset, no build command, output directory `.`
+1. Import the repo (framework preset: **Other**, no build command).
+2. Add environment variables from `.env.example`: `ADMIN_EMAIL`, `ADMIN_PASSWORD`, `ADMIN_SECRET`.
+3. Redeploy, then open `/admin`.
 
-## Notes
-Data is stored in the visitor's browser (localStorage) and listings are sample data. The admin PIN (`1234`) is a placeholder. Next step: add a backend (e.g. Supabase) for real accounts, shared data and verification.
+If the API is not deployed (e.g. opening the file locally), `/admin` runs in **demo mode** with `admin@sabaq.demo` / `Admin@123`. Demo mode is not secure.
+
+## Important limitation
+Accounts, listings, uploads and reviews are stored in each visitor's browser (localStorage). They are **not shared between users or devices**, so a tutor's upload will not appear in another person's admin panel. Passwords are hashed client-side for demonstration only. For production, add a database and storage (e.g. Supabase: Auth, Postgres, Storage with private buckets and row-level security) and move all checks server-side.
