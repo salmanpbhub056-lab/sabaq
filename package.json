@@ -1,1 +1,1 @@
-{ "name": "sabaq", "version": "2.0.0", "private": true, "description": "Tutor & academy finder for Karachi" }
+{ "name": "sabaq", "version": "3.0.0", "private": true, "description": "Tutor & academy finder for Karachi", "engines": { "node": ">=18" } }

@@ -78,22 +78,6 @@ const ico=()=>{try{lucide.createIcons()}catch{}},I=(n,t='')=>`<i data-lucide="${
 let lsF=0;const ls={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch{lsF=1}}};
 const LV=['Matric','O Levels','A Levels','MDCAT','ECAT','Extras'],AR=['DHA','Clifton','Gulshan-e-Iqbal','Gulistan-e-Johar','North Nazimabad','Nazimabad','PECHS','Saddar','Korangi','Malir'];
 const SU=['Physics','Chemistry','Biology','Maths','English','Computer Science','Accounting','Urdu','Quran & Tajweed','IELTS'];
-const mk=(id,t,n,a,l,s,f,m,g,x,r,v,b,h)=>({id,t,n,a,l,s,f,m,g,x,r,v,b,h,st:'approved',vs:v?'verified':'none',views:0,feat:0,photo:'',docs:[],ph:'92300000'+String(1000+id)});
-const D=[
-mk(1,'t','Hamza Qureshi','Gulshan-e-Iqbal',['MDCAT','A Levels'],['Physics'],9000,['Home','Online'],'M',8,4.8,1,'DOW graduate. Concept-first physics with weekly timed MCQ drills.','Small batches of 6'),
-mk(2,'t','Ayesha Siddiqui','DHA',['O Levels','A Levels'],['Chemistry','Biology'],12000,['Home','Online'],'F',10,4.9,1,'Cambridge past-paper specialist, patient with beginners.','Female students only'),
-mk(3,'a','Iqra MDCAT Academy','Nazimabad',['MDCAT'],['Biology','Chemistry','Physics','English'],14000,['Academy'],'B',12,4.6,1,'Full-year MDCAT programme with weekly mock exams and ranked results.','AC, library, UPS backup, girls’ section, transport'),
-mk(4,'a','Engineers Hub ECAT Prep','North Nazimabad',['ECAT','A Levels'],['Maths','Physics','English'],16000,['Academy','Online'],'B',9,4.5,1,'NED and FAST entry test coaching with recorded lectures.','AC, generator, library, online portal'),
-mk(5,'t','Bilal Ahmed','Gulistan-e-Johar',['Matric','O Levels'],['Maths','Computer Science'],6000,['Home','Online'],'M',5,4.4,0,'IBA student. Friendly teacher for Matric and O Level Maths.','Evening slots'),
-mk(6,'t','Sana Farooqui','Clifton',['O Levels','Extras'],['English','IELTS'],8000,['Home','Online'],'F',7,4.7,1,'IELTS band 8.5. Essay writing and speaking practice.','Weekend batches'),
-mk(7,'a','Cambridge Scholars Academy','PECHS',['O Levels','A Levels'],['Physics','Maths','Chemistry','Accounting'],18000,['Academy'],'B',15,4.7,1,'Subject specialists for CAIE and Edexcel with termly mock exams.','AC, library, backup power, girls’ section'),
-mk(8,'t','Usman Raza','Korangi',['Matric'],['Maths','Physics','Urdu'],4000,['Home'],'M',3,4.1,0,'Affordable Sindh Board Matric tuition with test series.','Morning & evening'),
-mk(9,'t','Dr. Maryam Hussain','Saddar',['MDCAT'],['Biology'],11000,['Online','Home'],'F',11,4.9,1,'Medical graduate. Biology mastery with diagrams and mnemonics.','Limited seats'),
-mk(10,'a','Noor ul Quran Institute','Malir',['Extras'],['Quran & Tajweed','Urdu'],3000,['Academy','Online'],'B',14,4.8,1,'Tajweed and Nazra for children and adults, separate male and female classes.','Separate sections'),
-mk(11,'t','Danish Mirza','DHA',['ECAT','A Levels'],['Maths','Physics'],10000,['Home','Online'],'M',6,4.5,0,'NED graduate, strong in calculus and mechanics.','Flexible timings'),
-mk(12,'a','Bright Start Coaching','Gulshan-e-Iqbal',['Matric','O Levels'],['Maths','English','Computer Science','Urdu'],7500,['Academy'],'B',8,4.3,0,'Affordable all-subject coaching for grades 6–10.','Fans, UPS, transport')];
-const RV0=[{l:1,w:'Parent, Gulshan',s:5,t:'My son’s mock scores improved in two months.',v:1},{l:2,w:'O Level student',s:5,t:'Explains with real exam questions. Very organised.',v:1},{l:3,w:'MDCAT 2026 student',s:4,t:'Good weekly tests. Classes are crowded early on.',v:1},{l:7,w:'Parent, PECHS',s:5,t:'Experienced teachers and strong results.',v:1}];
-const GR0=[{id:1,n:'MDCAT 2027 – Nazimabad evening group',ex:'MDCAT',a:'Nazimabad',m:7},{id:2,n:'ECAT Maths problem solvers',ex:'ECAT',a:'North Nazimabad',m:5},{id:3,n:'A Level Physics – DHA',ex:'A Levels',a:'DHA',m:4}];
 const T={mdcat:{n:'MDCAT sample: Biology & Physics',q:[['Powerhouse of the cell?',['Ribosome','Mitochondria','Golgi body','Lysosome'],1],['SI unit of force?',['Joule','Watt','Newton','Pascal'],2],['Universal blood donor group?',['A+','AB+','O−','B−'],2],['Speed equals?',['Distance × time','Distance ÷ time','Time ÷ distance','Mass × acceleration'],1],['Enzyme that digests starch?',['Pepsin','Lipase','Amylase','Trypsin'],2]]},
 ecat:{n:'ECAT sample: Maths & Physics',q:[['d/dx of x²?',['x','2x','x²','2'],1],['∫ 2x dx = ?',['x²+C','2x²+C','x+C','2+C'],0],['sin 90° = ?',['0','½','1','−1'],2],['SI unit of power?',['Joule','Watt','Newton','Volt'],1],['Roots of x²−5x+6=0?',['1, 6','2, 3','−2, −3','5, 6'],1]]},
 olevel:{n:'O Level sample: Chemistry & Maths',q:[['Chemical symbol of sodium?',['S','So','Na','N'],2],['pH of a neutral solution?',['0','7','14','1'],1],['12 × 12 = ?',['124','134','144','154'],2],['Gas released in photosynthesis?',['CO₂','Oxygen','Nitrogen','Hydrogen'],1],['Solve: 3x = 27',['6','7','8','9'],3]]}};
@@ -105,19 +89,14 @@ const EX=[['Matric annual exams','2027-03-10'],['Cambridge May/June series','202
 const AQ={'فزکس':'physics','فیزکس':'physics','fizix':'physics','کیمسٹری':'chemistry','kemistry':'chemistry','بائیولوجی':'biology','ریاضی':'maths','میتھ':'maths','math':'maths','انگلش':'english','گلشن':'gulshan','کلفٹن':'clifton','ڈیفنس':'dha','ٹیوٹر':'','کراچی':'','tutor':'','tutors':'','academy':'','tuition':'','in':'','for':'','best':''};
 const TX={en:{find:'Find',match:'Smart match',fees:'Fees',tests:'Mock tests',res:'Resources',groups:'Groups',safety:'Safety',me:'My space',more:'More',list:'List yourself',h:'The right tutor or academy in Karachi, found in minutes.',s:'Search'},ur:{find:'تلاش',match:'اسمارٹ میچ',fees:'فیس',tests:'ٹیسٹ',res:'وسائل',groups:'گروپس',safety:'حفاظت',me:'میرا پیج',more:'مزید',list:'خود کو لسٹ کریں',h:'کراچی میں صحیح ٹیوٹر یا اکیڈمی چند منٹ میں تلاش کریں۔',s:'تلاش کریں'}};
 const DF={q:'',lv:'',su:'',ar:'',mx:30000,mo:'',g:'',ty:'',vf:0,so:'rt'};
-let S={saved:ls.get('sv',[]),req:ls.get('rq',[]),rev:ls.get('rv',RV0),extra:ls.get('ex',[]),gr:ls.get('gr',GR0),joined:ls.get('jn',[]),ov:ls.get('ov',{3:{feat:1},7:{feat:1}}),rep:ls.get('rp',[]),best:ls.get('bs',{}),lang:ls.get('lg','en'),us:ls.get('us',[]),se:ls.get('se',null),nt:ls.get('nt',[]),cf:ls.get('cf',{banner:''}),au:ls.get('au',[])};
-S.rev.forEach((r,i)=>{if(!r.id)r.id='s'+i;r.d??=0});
-let F={...DF},cmp=[],Q=null,tmr;
-const save=()=>{ls.set('sv',S.saved);ls.set('rq',S.req);ls.set('rv',S.rev);ls.set('ex',S.extra);ls.set('gr',S.gr);ls.set('jn',S.joined);ls.set('ov',S.ov);ls.set('rp',S.rep);ls.set('bs',S.best);ls.set('lg',S.lang);ls.set('us',S.us);ls.set('se',S.se);ls.set('nt',S.nt);ls.set('cf',S.cf);ls.set('au',S.au);if(lsF){lsF=0;toast('Storage is full. Remove a file or old data.')}};
-const ids=()=>Math.random().toString(36).slice(2,9)+Date.now().toString(36);
-const tx=k=>TX[S.lang][k],live=x=>x.st=='approved',ver=x=>x.vs=='verified',cu=()=>S.us.find(u=>u.id==S.se&&!u.ban);
-const all=()=>D.map(x=>({...x,...(S.ov[x.id]||{})})).concat(S.extra),get=id=>all().find(x=>x.id==id);
-const upd=(id,p)=>{const e=S.extra.find(x=>x.id==id);if(e)Object.assign(e,p);else S.ov[id]={...(S.ov[id]||{}),...p}};
-const log=a=>{S.au.unshift({d:Date.now(),a});S.au.length=Math.min(S.au.length,200)};
-const notify=(uid,t,link)=>{if(uid)S.nt.unshift({id:ids(),uid,t,d:Date.now(),read:0,link:link||'#/me'})};
-const unread=()=>S.nt.filter(n=>n.uid==S.se&&!n.read).length;
+let S={me:null,L:[],rev:[],req:[],nt:[],gr:[],banner:'',ready:0,err:'',saved:ls.get('sv',[]),best:ls.get('bs',{}),lang:ls.get('lg','en')};
+let F={...DF},cmp=[],Q=null,tmr,A=null;
+const save=()=>{ls.set('sv',S.saved);ls.set('bs',S.best);ls.set('lg',S.lang)};
+const tx=k=>TX[S.lang][k],live=x=>x.st=='approved',ver=x=>x.vs=='verified',cu=()=>S.me;
+const all=()=>S.L,get=id=>S.L.find(x=>x.id==id);
+const unread=()=>S.nt.filter(n=>!n.read).length;
 const fd=t=>new Date(t).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
-const toast=m=>{const e=document.createElement('div');e.className='toast';e.setAttribute('role','status');e.textContent=m;document.body.append(e);setTimeout(()=>e.remove(),2600)};
+const toast=m=>{const e=document.createElement('div');e.className='toast';e.setAttribute('role','status');e.textContent=m;document.body.append(e);setTimeout(()=>e.remove(),3200)};
 const rating=x=>{const r=S.rev.filter(v=>v.l==x.id);return r.length?((x.r*5+r.reduce((a,b)=>a+b.s,0))/(5+r.length)):x.r};
 const pkr=n=>'Rs '+Number(n).toLocaleString('en-PK'),ini=n=>n.replace(/^(Dr\.|Sir)\s/,'').split(' ').slice(0,2).map(w=>w[0]).join('');
 const opts=(a,sel,ph)=>(ph?`<option value="">${ph}</option>`:'')+a.map(v=>`<option ${v==sel?'selected':''}>${esc(v)}</option>`).join('');
@@ -127,6 +106,11 @@ const BAD=/\b(fuck|shit|bitch|bastard|asshole|idiot|stupid)\b/i,URLR=/(https?:\/
 const modr=t=>BAD.test(t)?'Please keep it respectful.':URLR.test(t)?'Links are not allowed.':PHR.test(t)?'Please do not share phone numbers in public text.':'';
 const PHP='(\\+?92|0)3[0-9]{2}[ \\-]?[0-9]{7}',PHV=/^(\+?92|0)3\d{2}[ -]?\d{7}$/;
 const need=n=>{NEXT=n||location.hash||'#/';AM='in';location.hash='#/login'};
+async function api(a,d={},onErr){let j={},ok=false;try{const r=await fetch('/api/app',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'same-origin',body:JSON.stringify({...d,_a:a})});j=await r.json().catch(()=>({}));ok=r.ok}catch{j={error:'Network error. Check your connection.'}}
+if(!ok){const m=j.error||'Something went wrong. Please try again.';onErr?onErr(m):toast(m);return null}return j}
+async function sync(){const j=await api('boot',{},m=>{S.err=m});if(j){S.err='';S.me=j.me;S.L=j.L;S.rev=j.rev;S.req=j.req;S.nt=j.nt;S.gr=j.gr;S.banner=j.banner}return j}
+async function boot(){if(S.booting)return;S.booting=1;await sync();S.booting=0;S.ready=1;route()}
+const busy=(e,on)=>{const b=e&&e.target&&e.target.querySelector&&e.target.querySelector('button.btn');if(b)b.disabled=on};
 
 function card(x){const c=cmp.includes(x.id),s=S.saved.includes(x.id);
 return `<article class="card"><div class="top">${av(x)}<div style="min-width:0;flex:1"><h3 style="margin:0"><a href="#/p/${x.id}" class="nm">${esc(x.n)}</a></h3><div class="mut">${I(x.t=='a'?'building-2':'user')} ${x.t=='a'?'Academy':'Tutor'} · ${I('map-pin')} ${esc(x.a)}</div></div><button class="heart ${s?'on':''}" onclick="tg(${x.id})" aria-label="${s?'Remove from saved':'Save'}" aria-pressed="${s}">${I('heart')}</button></div>
@@ -166,7 +150,7 @@ ${sel('lv',LV,'Level')}${sel('su',SU,'Subject')}${sel('ar',AR,'Area')}${sel('mo'
 const VW={};
 function prof(id){const x=get(id),u=cu();if(!x||!(live(x)||(u&&x.uid==u.id)))return `<section><div class="w">This listing is not available. <a href="#/search">Back to search</a></div></section>`;
 const own=u&&x.uid==u.id,rvs=S.rev.filter(v=>v.l==x.id).sort((a,b)=>(b.d|0)-(a.d|0)),mr=u&&S.req.find(r=>r.l==x.id&&r.uid==u.id&&['new','accepted'].includes(r.st)),done=u&&rvs.some(v=>v.uid==u.id),wa=`https://wa.me/${x.ph}?text=${encodeURIComponent('Salam, I found you on Sabaq and would like a demo class.')}`;
-if(live(x)&&!own&&!VW[x.id]){VW[x.id]=1;upd(x.id,{views:(x.views|0)+1});save()}
+if(live(x)&&!own&&!VW[x.id]){VW[x.id]=1;api('view',{id:x.id})}
 const lg=`<div class="note">${I('lock')}<span><a href="#/login" onclick="NEXT='#/p/${x.id}'">Log in</a> to request a demo, review or report.</span></div>`;
 const rform=own?'':!u?lg:done?`<div class="note">${I('check')}<span>You have already reviewed this listing. Edit it in My space.</span></div>`:mr?`<form class="panel" onsubmit="rv(event,${x.id})"><h3>Write a verified review</h3><label>Rating</label><select name="s"><option>5</option><option>4</option><option>3</option><option>2</option><option>1</option></select><label>Review</label><textarea name="t" required minlength="10" maxlength="300" placeholder="Be honest and respectful. No links or phone numbers."></textarea><button class="btn" style="margin-top:12px">${I('send','Post review')}</button></form>`:`<div class="note">${I('lock')}<span>Request a demo first. Only students with a demo request can review.</span></div>`;
 const qform=own?`<div class="note">${I('info')}<span>This is your listing.</span></div>`:!u?lg:`<form class="panel" onsubmit="rq(event,${x.id})"><h3>${I('calendar-check','Request a demo class')}</h3><label>Student name</label><input name="n" required maxlength="40" value="${esc(u.name)}"><label>Phone</label><input name="p" required pattern="${PHP}" placeholder="03XX XXXXXXX"><label>Preferred time</label><input name="tm" placeholder="e.g. weekdays after 5pm" maxlength="60"><button class="btn" style="margin-top:14px;width:100%">${I('send','Send request')}</button></form>`;
@@ -198,36 +182,26 @@ function fin(){if(!Q)return;clearInterval(tmr);const k=Q.k,s=Q.s;Q=null;if(S.bes
 function resrc(){return `<section><div class="w"><h2>${I('book-open','Free resources')}</h2><p class="mut">Download study aids as text files.</p><div class="grid">${RS.map((r,i)=>`<div class="card"><div class="feat">${I(r.i)}<div><h3 style="margin:0">${r.n}</h3><span class="mut">${r.d}</span></div></div><button class="btn alt sm" onclick="dl(${i})">${I('download','Download')}</button></div>`).join('')}</div></div></section>`}
 function dl(i){const r=RS[i],a=document.createElement('a');a.href=URL.createObjectURL(new Blob([r.t],{type:'text/plain'}));a.download=r.n.replace(/\W+/g,'-').toLowerCase()+'.txt';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500);toast('Downloaded')}
 
-function groups(){return `<section><div class="w"><h2>${I('users','Study group finder')}</h2><p class="mut">Join students preparing for the same exam in your area.</p><div class="grid">${S.gr.map(g=>{const j=S.joined.includes(g.id);return `<div class="card"><h3>${esc(g.n)}</h3><div class="mut">${esc(g.ex)} · ${esc(g.a)} · ${g.m+(j?1:0)} members</div><button class="btn sm ${j?'alt':''}" onclick="jg(${g.id})">${I(j?'log-out':'user-plus',j?'Leave group':'Join group')}</button></div>`}).join('')}</div>
+function groups(){return `<section><div class="w"><h2>${I('users','Study group finder')}</h2><p class="mut">Join students preparing for the same exam in your area.</p><div class="grid">${S.gr.map(g=>{const j=g.j;return `<div class="card"><h3>${esc(g.n)}</h3><div class="mut">${esc(g.ex)} · ${esc(g.a)} · ${g.m} members</div><button class="btn sm ${j?'alt':''}" onclick="jg(${g.id})">${I(j?'log-out':'user-plus',j?'Leave group':'Join group')}</button></div>`}).join('')}</div>
 <form class="panel" style="max-width:520px;margin-top:24px" onsubmit="ng(event)"><h3>Start a group</h3><label>Group name</label><input name="n" required maxlength="60"><label>Exam</label><select name="ex">${opts(LV)}</select><label>Area</label><select name="a">${opts(AR)}</select><button class="btn" style="margin-top:14px">${I('plus','Create group')}</button></form></div></section>`}
 
 function safety(){return `<section><div class="w" style="max-width:720px"><h2>${I('shield-check','Parent safety guide')}</h2><div class="grid" style="grid-template-columns:1fr">${[['Meet first','Meet the tutor with a parent present and start with a demo class.'],['Check proof','Look for the Verified badge and read recent reviews. Ask for ID and qualifications.'],['Keep it open','Hold home lessons in a shared room with the door open.'],['Pay monthly','Confirm fees in writing and never pay months in advance.'],['Report concerns','Use the Report button on a listing if anything feels wrong.']].map(f=>`<div class="card feat">${I('check-circle-2')}<div><h3 style="margin:0">${f[0]}</h3><span class="mut">${f[1]}</span></div></div>`).join('')}</div><p class="note">${I('phone-call')}<span>Emergencies in Karachi: Police 15, Rescue 1122.</span></p></div></section>`}
 
-let AM='in',NEXT='#/me',LK={n:0,u:0};
-const hp=async(pw,salt)=>{try{const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(salt+pw));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}catch{return btoa(salt+pw)}};
+let AM='in',NEXT='#/me';
+
 function login(){if(cu()){location.hash='#/me';return ''}const up=AM=='up';
 return `<section><div class="w" style="max-width:460px"><div class="panel"><div class="tabs"><button class="${!up?'on':''}" onclick="AM='in';route(1)">Log in</button><button class="${up?'on':''}" onclick="AM='up';route(1)">Sign up</button></div><form onsubmit="${up?'doUp':'doIn'}(event)">
 ${up?`<label>Full name</label><input name="n" required minlength="2" maxlength="50" autocomplete="name"><label>I am a</label><select name="r"><option value="student">Student or parent</option><option value="provider">Tutor or academy</option></select>`:''}
 <label>Email</label><input name="e" type="email" required autocomplete="email"><label>Password</label><input name="p" type="password" required minlength="${up?8:1}" autocomplete="${up?'new-password':'current-password'}">${up?'<p class="mut">At least 8 characters with a letter and a number.</p><label class="chk"><input type="checkbox" name="t" required><span>I agree to the <a href="#/terms">Terms &amp; rules</a></span></label>':''}
 <p id="ae" class="err" role="alert"></p><button class="btn" style="width:100%">${up?'Create account':'Log in'}</button></form></div></div></section>`}
-async function doUp(e){e.preventDefault();const f=Object.fromEntries(new FormData(e.target)),em=f.e.trim().toLowerCase(),err=m=>$('#ae').textContent=m;
-if(!/^(?=.*[A-Za-z])(?=.*\d).{8,}$/.test(f.p))return err('Password needs 8+ characters with a letter and a number.');
-if(S.us.some(u=>u.email==em))return err('An account with this email already exists.');
-const salt=ids(),u={id:ids(),name:f.n.trim(),email:em,salt,h:await hp(f.p,salt),role:f.r=='provider'?'provider':'student',created:Date.now(),ban:0};
-S.us.push(u);S.se=u.id;notify(u.id,'Welcome to Sabaq! '+(u.role=='provider'?'Create your listing to start receiving students.':'Search for tutors and request a free demo.'));log('New '+u.role+' account: '+u.email);save();toast('Account created');const n=u.role=='provider'?'#/join':NEXT;NEXT='#/me';location.hash=n}
-async function doIn(e){e.preventDefault();const f=Object.fromEntries(new FormData(e.target)),err=m=>$('#ae').textContent=m;
-if(LK.u>Date.now())return err('Too many attempts. Try again in '+Math.ceil((LK.u-Date.now())/1000)+'s.');
-const u=S.us.find(x=>x.email==f.e.trim().toLowerCase());
-if(!u||u.h!=await hp(f.p,u.salt)){if(++LK.n>=5)LK={n:0,u:Date.now()+60000};return err('Incorrect email or password.')}
-if(u.ban)return err('This account has been suspended. Contact support.');
-LK={n:0,u:0};S.se=u.id;save();toast('Welcome back, '+u.name.split(' ')[0]);const n=NEXT;NEXT='#/me';location.hash=n}
-function lo(){S.se=null;save();toast('Logged out');if(!location.hash||location.hash=='#/')route();else location.hash='#/'}
-const rd=id=>{const n=S.nt.find(x=>x.id==id);if(n){n.read=1;save()}};
-function mr(){S.nt.filter(n=>n.uid==S.se).forEach(n=>n.read=1);save();route(1)}
-function purge(id){S.extra=S.extra.filter(x=>x.uid!=id);S.req=S.req.filter(x=>x.uid!=id);S.rev=S.rev.filter(x=>x.uid!=id);S.nt=S.nt.filter(x=>x.uid!=id);S.us=S.us.filter(x=>x.id!=id)}
+
+
+
+
+
 
 function acct(){const u=cu();if(!u){need('#/me');return ''}
-const mine=S.extra.filter(x=>x.uid==u.id),mids=mine.map(x=>x.id),inc=S.req.filter(r=>mids.includes(r.l)).sort((a,b)=>b.d-a.d),myr=S.req.filter(r=>r.uid==u.id),myv=S.rev.filter(v=>v.uid==u.id),nt=S.nt.filter(n=>n.uid==u.id).slice(0,8),sv=S.saved.map(get).filter(x=>x&&live(x)),rcv=S.rev.filter(v=>mids.includes(v.l)),vw=mine.reduce((a,x)=>a+(x.views|0),0),pv=u.role=='provider';
+const mine=S.L.filter(x=>x.uid==u.id),mids=mine.map(x=>x.id),inc=S.req.filter(r=>mids.includes(r.l)).sort((a,b)=>b.d-a.d),myr=S.req.filter(r=>r.uid==u.id),myv=S.rev.filter(v=>v.uid==u.id),nt=S.nt.filter(n=>n.uid==u.id).slice(0,8),sv=S.saved.map(get).filter(x=>x&&live(x)),rcv=S.rev.filter(v=>mids.includes(v.l)),vw=mine.reduce((a,x)=>a+(x.views|0),0),pv=u.role=='provider';
 const H=(t,n)=>`<h3 style="margin:30px 0 12px">${t}${n!=null?` <span class="mut">(${n})</span>`:''}</h3>`,E=t=>`<p class="mut">${t}</p>`;
 const rtag=s=>({new:'<span class="tag s">Waiting</span>',accepted:'<span class="tag v">Accepted</span>',declined:'<span class="tag" style="background:#ffe9ea;color:#b3261e">Declined</span>',cancelled:'<span class="tag">Cancelled</span>'})[s]||'';
 return `<section><div class="w"><div class="row"><div class="av" style="width:60px;height:60px">${esc(ini(u.name))}</div><div><h2 style="margin:0">${esc(u.name)}</h2><div class="mut">${esc(u.email)} · <span class="tag">${pv?'Tutor / academy':'Student / parent'}</span></div></div><button class="btn ghost sm" style="margin-inline-start:auto" onclick="lo()">${I('log-out','Log out')}</button></div>
@@ -241,114 +215,126 @@ ${H('My demo requests',myr.length)}${myr.map(r=>`<div class="card row" style="fl
 ${H('My reviews',myv.length)}${myv.map(v=>`<div class="card" style="margin-bottom:10px"><div class="row"><b>${esc(get(v.l)?.n||'Listing')}</b><span class="star">${I('star')} ${v.s}/5</span><span style="margin-inline-start:auto"><button class="btn sm alt" onclick="er('${v.id}')">${I('pencil','Edit')}</button> <button class="btn sm red" onclick="dr('${v.id}')">${I('trash-2','Delete')}</button></span></div>${esc(v.t)}</div>`).join('')||E('You have not written any reviews.')}
 ${H('Account settings')}<form class="panel" style="max-width:420px" onsubmit="rn(event)"><label>Display name</label><input name="n" value="${esc(u.name)}" required minlength="2" maxlength="50"><div class="row" style="margin-top:14px"><button class="btn sm">Save name</button><button type="button" class="btn red sm" onclick="da()">${I('trash-2','Delete account')}</button></div></form></div></section>`}
 
-function rq(e,l){e.preventDefault();const u=cu(),x=get(l);if(!u)return need('#/p/'+l);if(x.uid==u.id)return toast('You cannot request your own listing');
-const d=Object.fromEntries(new FormData(e.target));
-if(!PHV.test(d.p.trim()))return toast('Enter a valid Pakistani mobile number');
-if(S.req.some(r=>r.l==l&&r.uid==u.id&&['new','accepted'].includes(r.st)))return toast('You already have an active request for this listing');
-if(S.req.filter(r=>r.uid==u.id&&Date.now()-r.d<864e5).length>=5)return toast('Daily limit reached (5 requests). Try again tomorrow.');
-S.req.push({id:ids(),l,uid:u.id,n:d.n.trim(),p:d.p.trim(),tm:d.tm.trim(),d:Date.now(),st:'new'});notify(x.uid,`${d.n.trim()} requested a demo class.`,'#/me');save();toast('Request sent. You can now post a review.');route(1)}
-function cr(id){const r=S.req.find(x=>x.id==id);if(r&&r.st=='new'){r.st='cancelled';save();toast('Request cancelled');route(1)}}
-function rs(id,st){const r=S.req.find(x=>x.id==id);if(!r)return;r.st=st;notify(r.uid,`Your demo request to ${get(r.l)?.n} was ${st}.`,'#/me');save();toast('Request '+st);route(1)}
-function rv(e,l){e.preventDefault();const u=cu(),x=get(l);if(!u)return need('#/p/'+l);if(x.uid==u.id)return;const d=Object.fromEntries(new FormData(e.target));
-if(!S.req.some(r=>r.l==l&&r.uid==u.id&&['new','accepted'].includes(r.st)))return toast('Request a demo first');
-if(S.rev.some(v=>v.l==l&&v.uid==u.id))return toast('You already reviewed this listing');
-const m=modr(d.t);if(m)return toast(m);
-S.rev.push({id:ids(),l,uid:u.id,w:u.name.split(' ')[0]+' (student)',s:Math.min(5,Math.max(1,+d.s)),t:d.t.trim(),v:1,d:Date.now()});notify(x.uid,'You received a new review.','#/me');save();toast('Review posted');route(1)}
-function er(id){const v=S.rev.find(x=>x.id==id),t=prompt('Edit your review',v.t);if(!t||t.trim().length<10)return;const m=modr(t);if(m)return toast(m);v.t=t.trim().slice(0,300);v.ed=1;save();route(1)}
-function dr(id){if(!confirm('Delete this review?'))return;S.rev=S.rev.filter(x=>x.id!=id);save();route(1)}
-function rr(id){const v=S.rev.find(x=>x.id==id),t=prompt('Write a public reply');if(!t||!t.trim())return;const m=modr(t);if(m)return toast(m);v.reply=t.trim().slice(0,300);notify(v.uid,'A tutor replied to your review.','#/p/'+v.l);save();route(1)}
-function rp(e,l){e.preventDefault();const u=cu();if(!u)return need('#/p/'+l);const d=Object.fromEntries(new FormData(e.target));
-if(S.rep.some(r=>r.l==l&&r.uid==u.id&&r.st=='open'))return toast('You already reported this listing');
-S.rep.push({id:ids(),l,uid:u.id,r:d.r,d:d.t.trim(),t:Date.now(),st:'open'});log('Report on '+get(l)?.n);save();toast('Report sent. Our team will review it.');route(1)}
-function rn(e){e.preventDefault();const n=new FormData(e.target).get('n').trim();if(n.length<2)return;cu().name=n;save();toast('Name updated');route(1)}
-function da(){if(!confirm('Delete your account and all your data? This cannot be undone.'))return;purge(S.se);S.se=null;save();toast('Account deleted');location.hash='#/'}
-function del(id){if(!confirm('Delete this listing?'))return;S.extra=S.extra.filter(x=>x.id!=id);S.req=S.req.filter(r=>r.l!=id);save();toast('Listing deleted');route(1)}
+
+
+
+
+
+
+
+
+
+
 
 const rf=f=>new Promise((ok,no)=>{const r=new FileReader();r.onload=()=>ok(r.result);r.onerror=no;r.readAsDataURL(f)});
-const phs=f=>new Promise((ok,no)=>{const i=new Image();i.onload=()=>{const c=document.createElement('canvas'),z=320,m=Math.min(i.width,i.height);c.width=c.height=z;c.getContext('2d').drawImage(i,(i.width-m)/2,(i.height-m)/2,m,m,0,0,z,z);ok(c.toDataURL('image/jpeg',.82))};i.onerror=no;i.src=URL.createObjectURL(f)});
+const phs=f=>new Promise((ok,no)=>{const i=new Image();i.onload=()=>{const c=document.createElement('canvas'),z=256,m=Math.min(i.width,i.height);c.width=c.height=z;c.getContext('2d').drawImage(i,(i.width-m)/2,(i.height-m)/2,m,m,0,0,z,z);ok(c.toDataURL('image/jpeg',.72))};i.onerror=no;i.src=URL.createObjectURL(f)});
 function pp(i){const f=i.files[0];if(f)$('#pv').innerHTML=`<img src="${URL.createObjectURL(f)}" alt="">`}
 const DK={degree:'Degree / transcript',cnic:'CNIC / ID',other:'Other certificate'};
 function lform(id){const u=cu();if(!u){need(location.hash);return ''}
 const note=t=>`<section><div class="w" style="max-width:560px"><div class="note">${I('info')}<span>${t}</span></div></div></section>`;
 if(u.role!='provider')return note('Only tutor or academy accounts can create listings. <a href="#/me">Back to your account</a>.');
-const o=id?S.extra.find(y=>y.id==id&&y.uid==u.id):null;if(id&&!o)return note('Listing not found.');
-if(!o&&S.extra.filter(y=>y.uid==u.id).length>=2)return note('You can have up to 2 listings. <a href="#/me">Manage yours</a>.');
+const o=id?S.L.find(y=>y.id==id&&y.uid==u.id):null;if(id&&!o)return note('Listing not found.');
+if(!o&&S.L.filter(y=>y.uid==u.id).length>=2)return note('You can have up to 2 listings. <a href="#/me">Manage yours</a>.');
 const v=o||{t:'t',n:'',a:AR[0],l:[],s:[],f:'',m:['Home'],g:'M',x:'',ph:'92',b:'',h:'',photo:'',docs:[]};
 return `<section><div class="w" style="max-width:700px"><h2>${o?'Edit listing':'Create your listing'}</h2><p class="mut">Listings are reviewed by our team, usually within 48 hours. Edits are re-reviewed.</p><form class="panel" onsubmit="jn(event,${o?o.id:0})">
 <h3>Profile photo</h3><div class="row"><div class="av" id="pv" style="width:76px;height:76px">${v.photo?`<img src="${v.photo}" alt="">`:I('camera')}</div><div><input type="file" name="photo" accept="image/png,image/jpeg,image/webp" onchange="pp(this)"><div class="mut">JPG, PNG or WebP, max 5 MB. Use a clear, professional photo.</div></div></div>
 <label>Name</label><input name="n" required maxlength="60" value="${esc(v.n)}"><div class="row"><div style="flex:1;min-width:160px"><label>I am a</label><select name="t"><option value="t" ${v.t=='t'?'selected':''}>Tutor</option><option value="a" ${v.t=='a'?'selected':''}>Academy</option></select></div><div style="flex:1;min-width:160px"><label>Gender (tutors)</label><select name="g"><option value="M" ${v.g=='M'?'selected':''}>Male</option><option value="F" ${v.g=='F'?'selected':''}>Female</option><option value="B" ${v.g=='B'?'selected':''}>Mixed (academy)</option></select></div></div>
 <label>Area</label><select name="a">${opts(AR,v.a)}</select><label>Levels</label><div class="chips" style="margin:0">${LV.map(l=>`<label class="chk" style="margin:0"><input type="checkbox" name="l" value="${l}" ${v.l.includes(l)?'checked':''}>${l}</label>`).join('')}</div>
 <label>Subjects (comma separated)</label><input name="s" required placeholder="Physics, Maths" value="${esc(v.s.join(', '))}"><div class="row"><div style="flex:1;min-width:140px"><label>Fee per month (Rs)</label><input name="f" type="number" min="500" max="200000" required value="${esc(v.f)}"></div><div style="flex:1;min-width:140px"><label>Experience (years)</label><input name="x" type="number" min="0" max="60" required value="${esc(v.x)}"></div></div>
-<label>Mode</label><select name="m">${['Home','Academy','Online'].map(m=>`<option ${v.m[0]==m?'selected':''}>${m}</option>`).join('')}</select><label>WhatsApp number (923001234567)</label><input name="ph" required pattern="92[0-9]{10}" value="${esc(v.ph)}">
+<label>Mode</label><div class="chips" style="margin:0">${['Home','Academy','Online'].map(m=>`<label class="chk" style="margin:0"><input type="checkbox" name="m" value="${m}" ${v.m.includes(m)?'checked':''}>${m}</label>`).join('')}</div><label>WhatsApp number (923001234567)</label><input name="ph" required pattern="92[0-9]{10}" value="${esc(v.ph)}">
 <label>Timings or facilities</label><input name="h" required maxlength="100" value="${esc(v.h)}"><label>Short bio (20–250 characters)</label><textarea name="b" required minlength="20" maxlength="250">${esc(v.b)}</textarea>
 <h3 style="margin-top:24px">Verification documents</h3><div class="note">${I('lock')}<span>Only Sabaq admins can see these files. They are never shown publicly. Upload your degree and ID to earn the Verified badge.</span></div>
 ${['degree','cnic','other'].map(k=>`<label>${DK[k]} (PDF, JPG or PNG, max 1 MB)${k!='other'?' *':''}</label><input type="file" name="d_${k}" accept="application/pdf,image/png,image/jpeg">${(v.docs||[]).find(d=>d.k==k)?`<div class="mut">${I('check')} Uploaded: ${esc(v.docs.find(d=>d.k==k).name)} (choose a file to replace)</div>`:''}`).join('')}
 <label class="chk" style="margin-top:18px"><input type="checkbox" name="c" required><span>I confirm the information and documents are genuine and I agree to the <a href="#/terms">Terms &amp; rules</a>.</span></label><p id="ae" class="err" role="alert"></p><button class="btn">${I('send','Submit for review')}</button></form></div></section>`}
-async function jn(e,id){e.preventDefault();const u=cu(),fm=new FormData(e.target),d=Object.fromEntries(fm),l=fm.getAll('l'),err=m=>{$('#ae').textContent=m;return false},b=e.target.querySelector('button.btn');
-if(!l.length)return err('Pick at least one level.');if(!/^92\d{10}$/.test(d.ph))return err('WhatsApp number must look like 923001234567.');
-const mm=modr(d.b)||modr(d.h)||modr(d.n);if(mm)return err('Bio, timings and name: '+mm);
-const old=id?S.extra.find(y=>y.id==id&&y.uid==u.id):null;let photo=old?.photo||'',docs=[...(old?.docs||[])],nd=0;b.disabled=1;
-try{const pf=fm.get('photo');if(pf&&pf.size){if(!/^image\/(jpeg|png|webp)$/.test(pf.type)||pf.size>5e6)throw'Photo must be a JPG, PNG or WebP under 5 MB.';photo=await phs(pf)}
-for(const k of['degree','cnic','other']){const f=fm.get('d_'+k);if(f&&f.size){if(!/^(application\/pdf|image\/(jpeg|png))$/.test(f.type)||f.size>1e6)throw DK[k]+' must be a PDF, JPG or PNG under 1 MB.';docs=docs.filter(z=>z.k!=k);docs.push({k,name:f.name.slice(0,60),type:f.type,size:f.size,data:await rf(f)});nd=1}}}catch(x){b.disabled=0;return err(typeof x=='string'?x:'Could not read a file.')}
-const has=k=>docs.some(z=>z.k==k),vs=has('degree')&&has('cnic')?(old?.vs=='verified'&&!nd?'verified':'pending'):'none';
-const o={t:d.t,n:d.n.trim(),a:d.a,l,s:d.s.split(',').map(z=>z.trim()).filter(Boolean),f:+d.f,m:[d.m],g:d.t=='a'?'B':d.g,x:+d.x,r:old?.r||4,b:d.b.trim(),h:d.h.trim(),ph:d.ph,photo,docs,vs,st:'pending',note:''};
-if(old)Object.assign(old,o);else S.extra.push({id:Date.now(),uid:u.id,views:0,feat:0,v:0,created:Date.now(),...o});
-log((old?'Listing updated: ':'New listing: ')+o.n);save();b.disabled=0;toast('Submitted. We will review it soon.');location.hash='#/me'}
 
-function terms(){return `<section><div class="w" style="max-width:760px"><h2>${I('scroll-text','Terms & community rules')}</h2><div class="grid" style="grid-template-columns:1fr">${[['Accounts','Use your real name and email. Keep your password private. One person, one account. Accounts that break these rules may be suspended.'],['Listings','Information must be accurate. You may have up to 2 listings. New listings and edits are reviewed by an admin before they go live.'],['Verification & documents','Documents you upload are private and visible only to Sabaq admins for review. Fake documents lead to permanent removal.'],['Reviews','Only students with a demo request can review, once per listing. No abuse, links or phone numbers. Providers may reply once, publicly.'],['Payments & safety','Never pay months in advance. Sabaq does not handle payments. Report anyone who asks for advance payment or behaves inappropriately.'],['Reports','Reports are reviewed by admins. Listings can be suspended while a report is investigated.'],['Demo data','This build stores data in your own browser for demonstration. A production version needs a database and server-side checks.']].map(r=>`<div class="card"><h3 style="margin:0">${r[0]}</h3><span class="mut">${r[1]}</span></div>`).join('')}</div></div></section>`}
+function terms(){return `<section><div class="w" style="max-width:760px"><h2>${I('scroll-text','Terms & community rules')}</h2><div class="grid" style="grid-template-columns:1fr">${[['Accounts','Use your real name and email. Keep your password private. One person, one account. Accounts that break these rules may be suspended.'],['Listings','Information must be accurate. You may have up to 2 listings. New listings and edits are reviewed by an admin before they go live.'],['Verification & documents','Documents you upload are private and visible only to Sabaq admins for review. Fake documents lead to permanent removal.'],['Reviews','Only students with a demo request can review, once per listing. No abuse, links or phone numbers. Providers may reply once, publicly.'],['Payments & safety','Never pay months in advance. Sabaq does not handle payments. Report anyone who asks for advance payment or behaves inappropriately.'],['Reports','Reports are reviewed by admins. Listings can be suspended while a report is investigated.'],['Your data','Account details and documents are stored securely. Documents are visible only to Sabaq admins and are used only for verification.']].map(r=>`<div class="card"><h3 style="margin:0">${r[0]}</h3><span class="mut">${r[1]}</span></div>`).join('')}</div></div></section>`}
 
 let AS=null,AT='over',AL=null,AF='pending';
 const stt=x=>({pending:'<span class="tag" style="background:#fff3cd;color:#8a6100">Pending review</span>',approved:'<span class="tag v">Live</span>',rejected:'<span class="tag" style="background:#ffe9ea;color:#b3261e">Rejected</span>',suspended:'<span class="tag" style="background:#ffe9ea;color:#b3261e">Suspended</span>'})[x.st]||'';
 const vst=x=>x.vs=='verified'?`<span class="tag v">${I('badge-check','Verified')}</span>`:x.vs=='pending'?'<span class="tag s">Docs in review</span>':'<span class="tag">Unverified</span>';
 const logT=a=>`<div class="sc"><table><tr><th>When</th><th>Action</th></tr>${a.map(x=>`<tr><td>${new Date(x.d).toLocaleString('en-GB')}</td><td>${esc(x.a)}</td></tr>`).join('')||'<tr><td colspan="2" class="mut">No activity yet.</td></tr>'}</table></div>`;
-async function admCheck(){let r=null,j=null;try{r=await fetch('/api/admin',{credentials:'same-origin',cache:'no-store'});j=await r.json()}catch{}
-if(j&&r.status==200&&j.ok)AS='in';else if(j&&(r.status==401||r.status==500))AS='out';else AS=sessionStorage.getItem('ad')?'din':'dout';route()}
-function admin(){if(AS==null){admCheck();return '<div class="alog"><div class="panel">Checking session…</div></div>'}return AS=='in'||AS=='din'?adash():alogin()}
-function alogin(){return `<div class="alog"><form class="panel" onsubmit="al(event)" style="width:100%;max-width:400px"><div class="logo" style="margin-bottom:6px"><span>${I('shield-check')}</span>Sabaq Admin</div><p class="mut">Authorised staff only.</p><label for="ae1">Email</label><input id="ae1" name="email" type="email" required autocomplete="username"><label for="ap1">Password</label><input id="ap1" name="password" type="password" required autocomplete="current-password"><p id="ae" class="err" role="alert"></p><button id="ab" class="btn" style="width:100%">Log in</button>${AS=='dout'?'<p class="mut" style="margin-top:14px">Demo mode (admin API not deployed): admin@sabaq.demo / Admin@123</p>':''}<p style="text-align:center;margin:14px 0 0"><a href="/" class="mut">← Back to site</a></p></form></div>`}
-async function al(e){e.preventDefault();const d=Object.fromEntries(new FormData(e.target)),err=m=>$('#ae').textContent=m;
-if(AS=='dout'){if(d.email.trim().toLowerCase()=='admin@sabaq.demo'&&d.password=='Admin@123'){AS='din';sessionStorage.setItem('ad','1');log('Admin login (demo mode)');save();route()}else err('Invalid email or password.');return}
-const b=$('#ab');b.disabled=1;try{const r=await fetch('/api/admin',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'same-origin',body:JSON.stringify(d)}),j=await r.json().catch(()=>({}));if(r.ok&&j.ok){AS='in';log('Admin login');save();route()}else err(j.error||'Invalid email or password.')}catch{err('Network error. Try again.')}b.disabled=0}
-async function alo(){if(AS=='in'){try{await fetch('/api/admin',{method:'DELETE',credentials:'same-origin'})}catch{}}const dm=AS=='din';sessionStorage.removeItem('ad');AS=dm?'dout':'out';AT='over';AL=null;route()}
-function adash(){const L=all(),pend=L.filter(x=>x.st=='pending').length,rpn=S.rep.filter(r=>r.id&&r.st=='open').length;
+
+function admin(){if(AS==null){admCheck();return '<div class="alog"><div class="panel">Checking session…</div></div>'}return AS=='in'?adash():alogin()}
+function alogin(){return `<div class="alog"><form class="panel" onsubmit="al(event)" style="width:100%;max-width:400px"><div class="logo" style="margin-bottom:6px"><span>${I('shield-check')}</span>Sabaq Admin</div><p class="mut">Authorised staff only.</p><label for="ae1">Email</label><input id="ae1" name="email" type="email" required autocomplete="username"><label for="ap1">Password</label><input id="ap1" name="password" type="password" required autocomplete="current-password"><p id="ae" class="err" role="alert"></p><button id="ab" class="btn" style="width:100%">Log in</button>${AE?`<p class="err">${esc(AE)}</p>`:''}<p style="text-align:center;margin:14px 0 0"><a href="/" class="mut">← Back to site</a></p></form></div>`}
+
+
+function adash(){if(!A){loadA();return '<div class="alog"><div class="panel">Loading…</div></div>'}const L=A.L,pend=L.filter(x=>x.st=='pending').length,rpn=A.rep.filter(r=>r.id&&r.st=='open').length;
 const T=[['over','layout-dashboard','Overview'],['list','list-checks','Listings',pend],['users','users','Users'],['revs','message-square','Reviews'],['reps','flag','Reports',rpn],['log','scroll-text','Activity'],['set','settings','Settings']];
-const B={over:aOver,list:aList,users:aUsers,revs:aRevs,reps:aReps,log:()=>`<h2>Activity log</h2>${logT(S.au)}`,set:aSet}[AT]();
-return `<div class="ad"><aside class="as"><div class="logo" style="margin-bottom:18px"><span>${I('shield-check')}</span>Sabaq Admin</div>${T.map(t=>`<button class="${AT==t[0]?'on':''}" onclick="AT='${t[0]}';AL=null;route(1)">${I(t[1])}${t[2]}${t[3]?`<b class="bd">${t[3]}</b>`:''}</button>`).join('')}<div style="margin-top:auto"><a class="btn ghost sm" style="width:100%" href="/">${I('external-link','View site')}</a><button class="btn alt sm" style="width:100%;margin-top:8px" onclick="alo()">${I('log-out','Log out')}</button></div></aside><div class="am">${AS=='din'?`<div class="note" style="margin-bottom:16px">${I('info')}<span>Demo mode: the admin API is not deployed, so this session is not secure.</span></div>`:''}${B}</div></div>`}
-function aOver(){const L=all(),k=[['Live listings',L.filter(live).length,'check-circle-2'],['Pending review',L.filter(x=>x.st=='pending').length,'clock'],['Users',S.us.length,'users'],['Demo requests',S.req.length,'calendar-check'],['Open reports',S.rep.filter(r=>r.id&&r.st=='open').length,'flag'],['Reviews',S.rev.length,'message-square']],q=L.filter(x=>x.st=='pending').slice(0,5);
-return `<h2>Overview</h2><div class="kg">${k.map(a=>`<div class="stat">${I(a[2])}<b>${a[1]}</b><span>${a[0]}</span></div>`).join('')}</div><h3 style="margin-top:28px">Review queue</h3>${q.map(x=>`<div class="card row" style="flex-direction:row;margin-bottom:10px"><b>${esc(x.n)}</b>${stt(x)}${vst(x)}<button class="btn sm" style="margin-inline-start:auto" onclick="AT='list';AL=${x.id};route(1)">Review</button></div>`).join('')||'<p class="mut">Nothing waiting.</p>'}<h3 style="margin-top:28px">Recent activity</h3>${logT(S.au.slice(0,6))}`}
-function aList(){if(AL)return aDet(get(AL));const L=all().filter(x=>AF=='all'||x.st==AF);
+const B={over:aOver,list:aList,users:aUsers,revs:aRevs,reps:aReps,log:()=>`<h2>Activity log</h2>${logT(A.au)}`,set:aSet}[AT]();
+return `<div class="ad"><aside class="as"><div class="logo" style="margin-bottom:18px"><span>${I('shield-check')}</span>Sabaq Admin</div>${T.map(t=>`<button class="${AT==t[0]?'on':''}" onclick="AT='${t[0]}';AL=null;route(1)">${I(t[1])}${t[2]}${t[3]?`<b class="bd">${t[3]}</b>`:''}</button>`).join('')}<div style="margin-top:auto"><a class="btn ghost sm" style="width:100%" href="/">${I('external-link','View site')}</a><button class="btn alt sm" style="width:100%;margin-top:8px" onclick="alo()">${I('log-out','Log out')}</button></div></aside><div class="am">${B}</div></div>`}
+function aOver(){const L=A.L,k=[['Live listings',L.filter(live).length,'check-circle-2'],['Pending review',L.filter(x=>x.st=='pending').length,'clock'],['Users',A.us.length,'users'],['Demo requests',A.rc,'calendar-check'],['Open reports',A.rep.filter(r=>r.id&&r.st=='open').length,'flag'],['Reviews',A.rev.length,'message-square']],q=L.filter(x=>x.st=='pending').slice(0,5);
+return `<h2>Overview</h2><div class="kg">${k.map(a=>`<div class="stat">${I(a[2])}<b>${a[1]}</b><span>${a[0]}</span></div>`).join('')}</div><h3 style="margin-top:28px">Review queue</h3>${q.map(x=>`<div class="card row" style="flex-direction:row;margin-bottom:10px"><b>${esc(x.n)}</b>${stt(x)}${vst(x)}<button class="btn sm" style="margin-inline-start:auto" onclick="AT='list';AL=${x.id};route(1)">Review</button></div>`).join('')||'<p class="mut">Nothing waiting.</p>'}<h3 style="margin-top:28px">Recent activity</h3>${logT(A.au.slice(0,6))}`}
+function aList(){if(AL)return aDet(ag(AL));const L=A.L.filter(x=>AF=='all'||x.st==AF);
 return `<div class="row"><h2 style="margin:0">Listings</h2><select style="width:auto;margin-inline-start:auto" onchange="AF=this.value;route(1)" aria-label="Filter">${['pending','approved','rejected','suspended','all'].map(s=>`<option value="${s}" ${AF==s?'selected':''}>${s[0].toUpperCase()+s.slice(1)}</option>`).join('')}</select></div><div class="sc" style="margin-top:16px"><table><tr><th>Listing</th><th>Area</th><th>Status</th><th>Verification</th><th>Docs</th><th></th></tr>${L.map(x=>`<tr><td><b>${esc(x.n)}</b><div class="mut">${x.t=='a'?'Academy':'Tutor'}${x.feat?' · Featured':''}</div></td><td>${esc(x.a)}</td><td>${stt(x)}</td><td>${vst(x)}</td><td>${(x.docs||[]).length}</td><td><button class="btn sm alt" onclick="AL=${x.id};route(1)">Open</button></td></tr>`).join('')||'<tr><td colspan="6" class="mut">No listings.</td></tr>'}</table></div>`}
-function aDet(x){if(!x){AL=null;return aList()}const o=S.us.find(u=>u.id==x.uid);
+function aDet(x){if(!x){AL=null;return aList()}const o=A.us.find(u=>u.id==x.uid);
 return `<button class="btn ghost sm" onclick="AL=null;route(1)">${I('arrow-left','All listings')}</button><div class="panel" style="margin-top:14px"><div class="top">${av(x,64)}<div><h2 style="margin:0">${esc(x.n)}</h2><div class="mut">${x.t=='a'?'Academy':'Tutor'} · ${esc(x.a)} · ${pkr(x.f)}/mo · ${esc(x.ph)}</div><div>${stt(x)}${vst(x)}</div></div></div><p>${esc(x.b)}</p>
 <div class="sc"><table><tr><th>Owner</th><td>${o?esc(o.name)+' ('+esc(o.email)+')':'Seed listing'}</td></tr><tr><th>Levels</th><td>${x.l.join(', ')}</td></tr><tr><th>Subjects</th><td>${x.s.map(esc).join(', ')}</td></tr><tr><th>Mode</th><td>${x.m.join(', ')}</td></tr><tr><th>Views</th><td>${x.views|0}</td></tr>${x.note?`<tr><th>Last note</th><td>${esc(x.note)}</td></tr>`:''}</table></div>
-<h3 style="margin-top:20px">Documents</h3>${(x.docs||[]).map((d,i)=>`<div class="row" style="margin-bottom:8px">${I(d.type=='application/pdf'?'file-text':'image')}<b>${DK[d.k]}</b><span class="mut">${esc(d.name)} · ${Math.round(d.size/1024)} KB</span><button class="btn sm alt" style="margin-inline-start:auto" onclick="vd(${x.id},${i})">${I('eye','View')}</button></div>`).join('')||'<p class="mut">No documents uploaded.</p>'}
+<h3 style="margin-top:20px">Documents</h3>${(x.docs||[]).map((d,i)=>`<div class="row" style="margin-bottom:8px">${I(d.type=='application/pdf'?'file-text':'image')}<b>${DK[d.k]}</b><span class="mut">${esc(d.name)} · ${Math.round(d.size/1024)} KB</span><button class="btn sm alt" style="margin-inline-start:auto" onclick="vd('${d.id}')">${I('eye','View')}</button></div>`).join('')||'<p class="mut">No documents uploaded.</p>'}
 <h3>Verification checklist</h3>${['Degree matches the name and subjects','ID matches the name','Information looks accurate','Photo is appropriate'].map(c=>`<label class="chk"><input type="checkbox" class="ck"><span>${c}</span></label>`).join('')}
 <label for="ar">Reason or note (required to reject or suspend, shown to the owner)</label><textarea id="ar" maxlength="300"></textarea>
 <div class="row" style="margin-top:14px">${x.st!='approved'?`<button class="btn sm" onclick="ad(${x.id},'ok')">${I('check','Approve')}</button>`:''}<button class="btn sm" onclick="ad(${x.id},'ver')">${I('badge-check','Approve & verify')}</button>${x.st!='rejected'?`<button class="btn red sm" onclick="ad(${x.id},'no')">${I('x','Reject')}</button>`:''}${x.st=='approved'?`<button class="btn red sm" onclick="ad(${x.id},'sus')">${I('ban','Suspend')}</button>`:''}${x.vs=='verified'?`<button class="btn alt sm" onclick="ad(${x.id},'unv')">Revoke verification</button>`:''}<button class="btn alt sm" onclick="ad(${x.id},'feat')">${I('star',x.feat?'Unfeature':'Feature')}</button><button class="btn red sm" onclick="ad(${x.id},'del')">${I('trash-2','Delete')}</button></div></div>`}
-function ad(id,a){const x=get(id),r=($('#ar')?.value||'').trim(),ex=S.extra.some(y=>y.id==id);
-if((a=='no'||a=='sus')&&r.length<5)return toast('Add a reason (min 5 characters)');
-if(a=='ver'){if(![...document.querySelectorAll('.ck')].every(c=>c.checked))return toast('Complete the whole checklist to verify');if(ex&&!['degree','cnic'].every(k=>(x.docs||[]).some(d=>d.k==k)))return toast('Degree and ID documents are required')}
-if(a=='del'){if(!ex)return toast('Sample listings cannot be deleted. Suspend instead.');if(!confirm('Delete this listing permanently?'))return;S.extra=S.extra.filter(y=>y.id!=id);S.req=S.req.filter(q=>q.l!=id);AL=null}
-const m={ok:[{st:'approved',note:''},'Your listing was approved and is now live.'],ver:[{st:'approved',vs:'verified',note:''},'Your listing was approved and verified.'],no:[{st:'rejected',note:r,vs:x.vs=='pending'?'none':x.vs},'Your listing was rejected: '+r],sus:[{st:'suspended',note:r},'Your listing was suspended: '+r],unv:[{vs:'none'},'Your verification badge was removed.'],feat:[{feat:x.feat?0:1}]}[a];
-if(m){upd(id,m[0]);if(m[1])notify(x.uid,m[1],'#/me')}log(`${a.toUpperCase()}: ${x.n}${r?' ('+r+')':''}`);save();toast('Done');route(1)}
-function vd(id,i){const d=get(id).docs[i],p=d.data.split(','),mt=p[0].match(/:(.*?);/)[1],b=atob(p[1]),a=new Uint8Array(b.length);for(let j=0;j<b.length;j++)a[j]=b.charCodeAt(j);window.open(URL.createObjectURL(new Blob([a],{type:mt})),'_blank')}
-function aUsers(){return `<h2>Users</h2><div class="sc"><table><tr><th>Name</th><th>Email</th><th>Role</th><th>Joined</th><th>Status</th><th></th></tr>${S.us.map(u=>`<tr><td>${esc(u.name)}</td><td>${esc(u.email)}</td><td>${u.role}</td><td>${fd(u.created)}</td><td>${u.ban?'Suspended':'Active'}</td><td><button class="btn sm alt" onclick="ub('${u.id}')">${u.ban?'Reinstate':'Suspend'}</button> <button class="btn sm red" onclick="ux('${u.id}')">Delete</button></td></tr>`).join('')||'<tr><td colspan="6" class="mut">No users yet.</td></tr>'}</table></div>`}
-function ub(id){const u=S.us.find(x=>x.id==id);u.ban=u.ban?0:1;log((u.ban?'Suspended user ':'Reinstated user ')+u.email);save();route(1)}
-function ux(id){const u=S.us.find(x=>x.id==id);if(!confirm('Delete '+u.email+' and all their data?'))return;purge(id);log('Deleted user '+u.email);save();route(1)}
-function aRevs(){return `<h2>Reviews</h2>${S.rev.map(v=>`<div class="card" style="margin-bottom:10px"><div class="row"><b>${esc(get(v.l)?.n||'Deleted listing')}</b><span class="mut">by ${esc(v.w)} · ${v.s}/5</span><button class="btn red sm" style="margin-inline-start:auto" onclick="arv('${v.id}')">${I('trash-2','Remove')}</button></div>${esc(v.t)}</div>`).join('')||'<p class="mut">No reviews.</p>'}`}
-function arv(id){if(!confirm('Remove this review?'))return;S.rev=S.rev.filter(v=>v.id!=id);log('Removed review');save();route(1)}
-function aReps(){return `<h2>Reports</h2>${S.rep.filter(r=>r.id).map(r=>{const x=get(r.l);return `<div class="card" style="margin-bottom:10px;${r.st!='open'?'opacity:.6':''}"><div class="row"><b>${esc(x?.n||'Deleted listing')}</b><span class="tag">${esc(r.r)}</span><span class="tag s">${r.st}</span><span class="mut" style="margin-inline-start:auto">${fd(r.t)}</span></div>${esc(r.d)}${r.st=='open'?`<div class="row"><button class="btn sm alt" onclick="rx('${r.id}','dismissed')">Dismiss</button>${x?`<button class="btn sm red" onclick="rx('${r.id}','suspended')">Suspend listing</button><button class="btn sm ghost" onclick="AT='list';AL=${x.id};route(1)">Open listing</button>`:''}</div>`:''}</div>`}).join('')||'<p class="mut">No reports.</p>'}`}
-function rx(id,a){const r=S.rep.find(x=>x.id==id);r.st=a;if(a=='suspended'){const x=get(r.l);if(x){upd(x.id,{st:'suspended',note:'Suspended after a report: '+r.r});notify(x.uid,'Your listing was suspended after a report. Contact support.')}}log('Report '+a);save();route(1)}
-function aSet(){return `<h2>Settings</h2><form class="panel" style="max-width:520px" onsubmit="sb(event)"><h3>Site announcement</h3><p class="mut">Shown as a banner at the top of every public page. Leave empty to hide.</p><input name="b" maxlength="140" value="${esc(S.cf.banner)}" aria-label="Announcement"><button class="btn sm" style="margin-top:12px">Save</button></form><div class="panel" style="max-width:520px;margin-top:18px"><h3>Export data</h3><div class="row"><button class="btn alt sm" onclick="csv('l')">${I('download','Listings CSV')}</button><button class="btn alt sm" onclick="csv('u')">${I('download','Users CSV')}</button></div></div><div class="panel" style="max-width:520px;margin-top:18px"><h3>Danger zone</h3><p class="mut">Clears all demo data stored in this browser.</p><button class="btn red sm" onclick="rst()">${I('trash-2','Reset all data')}</button></div>`}
-function sb(e){e.preventDefault();S.cf.banner=new FormData(e.target).get('b').trim();log('Announcement updated');save();toast('Saved')}
-function csv(n){const q=c=>'"'+String(c).replace(/^[=+\-@]/,"'$&").replace(/"/g,'""')+'"',rows=n=='l'?[['id','name','type','area','fee','status','verification','views']].concat(all().map(x=>[x.id,x.n,x.t,x.a,x.f,x.st,x.vs,x.views|0])):[['name','email','role','joined','banned']].concat(S.us.map(u=>[u.name,u.email,u.role,fd(u.created),u.ban?1:0])),a=document.createElement('a');a.href=URL.createObjectURL(new Blob([rows.map(r=>r.map(q).join(',')).join('\n')],{type:'text/csv'}));a.download=(n=='l'?'listings':'users')+'.csv';a.click()}
-function rst(){if(!confirm('Delete ALL data in this browser?'))return;localStorage.clear();location.reload()}
+
+
+function aUsers(){return `<h2>Users</h2><div class="sc"><table><tr><th>Name</th><th>Email</th><th>Role</th><th>Joined</th><th>Status</th><th></th></tr>${A.us.map(u=>`<tr><td>${esc(u.name)}</td><td>${esc(u.email)}</td><td>${u.role}</td><td>${fd(u.created)}</td><td>${u.ban?'Suspended':'Active'}</td><td><button class="btn sm alt" onclick="ub('${u.id}')">${u.ban?'Reinstate':'Suspend'}</button> <button class="btn sm red" onclick="ux('${u.id}')">Delete</button></td></tr>`).join('')||'<tr><td colspan="6" class="mut">No users yet.</td></tr>'}</table></div>`}
+
+
+function aRevs(){return `<h2>Reviews</h2>${A.rev.map(v=>`<div class="card" style="margin-bottom:10px"><div class="row"><b>${esc(ag(v.l)?.n||'Deleted listing')}</b><span class="mut">by ${esc(v.w)} · ${v.s}/5</span><button class="btn red sm" style="margin-inline-start:auto" onclick="arv('${v.id}')">${I('trash-2','Remove')}</button></div>${esc(v.t)}</div>`).join('')||'<p class="mut">No reviews.</p>'}`}
+
+function aReps(){return `<h2>Reports</h2>${A.rep.filter(r=>r.id).map(r=>{const x=ag(r.l);return `<div class="card" style="margin-bottom:10px;${r.st!='open'?'opacity:.6':''}"><div class="row"><b>${esc(x?.n||'Deleted listing')}</b><span class="tag">${esc(r.r)}</span><span class="tag s">${r.st}</span><span class="mut" style="margin-inline-start:auto">${fd(r.t)}</span></div>${esc(r.d)}${r.st=='open'?`<div class="row"><button class="btn sm alt" onclick="rx('${r.id}','dismissed')">Dismiss</button>${x?`<button class="btn sm red" onclick="rx('${r.id}','suspended')">Suspend listing</button><button class="btn sm ghost" onclick="AT='list';AL=${x.id};route(1)">Open listing</button>`:''}</div>`:''}</div>`}).join('')||'<p class="mut">No reports.</p>'}`}
+
+function aSet(){return `<h2>Settings</h2><form class="panel" style="max-width:520px" onsubmit="sb(event)"><h3>Site announcement</h3><p class="mut">Shown as a banner at the top of every public page. Leave empty to hide.</p><input name="b" maxlength="140" value="${esc(S.banner)}" aria-label="Announcement"><button class="btn sm" style="margin-top:12px">Save</button></form><div class="panel" style="max-width:520px;margin-top:18px"><h3>Export data</h3><div class="row"><button class="btn alt sm" onclick="csv('l')">${I('download','Listings CSV')}</button><button class="btn alt sm" onclick="csv('u')">${I('download','Users CSV')}</button></div></div>`}
+
+
+
+let AE='';
+async function doUp(e){e.preventDefault();const f=Object.fromEntries(new FormData(e.target)),err=m=>$('#ae').textContent=m;busy(e,1);const j=await api('signup',{n:f.n,e:f.e,p:f.p,r:f.r,t:f.t?1:0},err);busy(e,0);if(!j)return;await sync();toast('Account created');const n=f.r=='provider'?'#/join':NEXT;NEXT='#/me';location.hash=n;route()}
+async function doIn(e){e.preventDefault();const f=Object.fromEntries(new FormData(e.target)),err=m=>$('#ae').textContent=m;busy(e,1);const j=await api('login',{e:f.e,p:f.p},err);busy(e,0);if(!j)return;await sync();toast('Welcome back, '+(S.me?S.me.name.split(' ')[0]:''));const n=NEXT;NEXT='#/me';location.hash=n;route()}
+async function lo(){await api('logout');await sync();toast('Logged out');location.hash='#/';route()}
+function rd(id){const n=S.nt.find(x=>x.id==id);if(n&&!n.read){n.read=true;api('notif.read',{id})}}
+async function mr(){await api('notif.read',{all:1});await sync();route(1)}
+async function rq(e,l){e.preventDefault();const d=Object.fromEntries(new FormData(e.target));if(!PHV.test(d.p.trim()))return toast('Enter a valid Pakistani mobile number');busy(e,1);const j=await api('request.create',{l,n:d.n,p:d.p,tm:d.tm});busy(e,0);if(!j)return;await sync();toast('Request sent. You can now post a review.');route(1)}
+async function cr(id){if(await api('request.cancel',{id})){await sync();toast('Request cancelled');route(1)}}
+async function rs(id,st){if(await api('request.set',{id,st})){await sync();toast('Request '+st);route(1)}}
+async function rv(e,l){e.preventDefault();const d=Object.fromEntries(new FormData(e.target)),m=modr(d.t);if(m)return toast(m);busy(e,1);const j=await api('review.create',{l,s:d.s,t:d.t});busy(e,0);if(!j)return;await sync();toast('Review posted');route(1)}
+async function er(id){const v=S.rev.find(x=>x.id==id),t=prompt('Edit your review',v.t);if(!t||t.trim().length<10)return;const m=modr(t);if(m)return toast(m);if(await api('review.edit',{id,t})){await sync();route(1)}}
+async function dr(id){if(!confirm('Delete this review?'))return;if(await api('review.delete',{id})){await sync();route(1)}}
+async function rr(id){const t=prompt('Write a public reply');if(!t||!t.trim())return;const m=modr(t);if(m)return toast(m);if(await api('review.reply',{id,t})){await sync();route(1)}}
+async function rp(e,l){e.preventDefault();const d=Object.fromEntries(new FormData(e.target));busy(e,1);const j=await api('report.create',{l,r:d.r,t:d.t});busy(e,0);if(j){toast('Report sent. Our team will review it.');route(1)}}
+async function rn(e){e.preventDefault();if(await api('me.rename',{n:new FormData(e.target).get('n')})){await sync();toast('Name updated');route(1)}}
+async function da(){if(!confirm('Delete your account and all your data? This cannot be undone.'))return;if(await api('me.delete')){await sync();toast('Account deleted');location.hash='#/';route()}}
+async function del(id){if(!confirm('Delete this listing?'))return;if(await api('listing.delete',{id})){await sync();toast('Listing deleted');route(1)}}
+async function jg(id){if(!cu())return need('#/groups');if(await api('group.join',{id})){await sync();route(1)}}
+async function ng(e){e.preventDefault();if(!cu())return need('#/groups');const d=Object.fromEntries(new FormData(e.target));if(await api('group.create',{n:d.n,ex:d.ex,a:d.a})){await sync();toast('Group created');route(1)}}
+async function jn(e,id){e.preventDefault();const fm=new FormData(e.target),d=Object.fromEntries(fm),l=fm.getAll('l'),m=fm.getAll('m'),err=x=>{$('#ae').textContent=x;return false},b=e.target.querySelector('button.btn');
+if(!l.length)return err('Pick at least one level.');if(!m.length)return err('Pick at least one mode.');if(!/^92\d{10}$/.test(d.ph))return err('WhatsApp number must look like 923001234567.');
+const mm=modr(d.b)||modr(d.h)||modr(d.n);if(mm)return err('Name, bio and timings: '+mm);
+let photo=null,docs=[],tot=0;b.disabled=1;
+try{const pf=fm.get('photo');if(pf&&pf.size){if(!/^image\/(jpeg|png|webp)$/.test(pf.type)||pf.size>5e6)throw'Photo must be a JPG, PNG or WebP under 5 MB.';photo=await phs(pf)}
+for(const k of['degree','cnic','other']){const f=fm.get('d_'+k);if(f&&f.size){if(!/^(application\/pdf|image\/(jpeg|png))$/.test(f.type)||f.size>8e5)throw DK[k]+' must be a PDF, JPG or PNG under 800 KB.';const data=await rf(f);tot+=data.length;docs.push({k,name:f.name.slice(0,60),type:f.type,size:f.size,data})}}
+if(tot>3.4e6)throw'The files are too large in total. Please use smaller files.'}catch(x){b.disabled=0;return err(typeof x=='string'?x:'Could not read a file.')}
+const j=await api('listing.save',{id,t:d.t,n:d.n,a:d.a,l,s:d.s,f:d.f,x:d.x,m,g:d.g,ph:d.ph,b:d.b,h:d.h,photo,docs},err);b.disabled=0;if(!j)return;await sync();toast('Submitted. We will review it soon.');location.hash='#/me';route()}
+async function admCheck(){let r=null,j=null;try{r=await fetch('/api/admin',{credentials:'same-origin',cache:'no-store'});j=await r.json()}catch{}
+if(j&&r.status==200&&j.ok)AS='in';else if(j&&r.status==401)AS='out';else{AS='out';AE=(j&&j.error)||'The admin service is not available. Check that the site was deployed with the api folder.'}route()}
+async function loadA(){const j=await api('admin.data',{},m=>{if(/log in/i.test(m)){AS='out';A=null;route()}else toast(m)});if(j){A=j;route(1)}}
+const ag=id=>A.L.find(x=>x.id==id);
+async function al(e){e.preventDefault();const d=Object.fromEntries(new FormData(e.target)),err=m=>$('#ae').textContent=m,b=$('#ab');b.disabled=1;
+try{const r=await fetch('/api/admin',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'same-origin',body:JSON.stringify(d)}),j=await r.json().catch(()=>({}));if(r.ok&&j.ok){AS='in';AE='';A=null;route()}else err(j.error||'Invalid email or password.')}catch{err('Network error. Try again.')}b.disabled=0}
+async function alo(){try{await fetch('/api/admin',{method:'DELETE',credentials:'same-origin'})}catch{}AS='out';A=null;AT='over';AL=null;route()}
+async function aa(a,d,msg){const j=await api(a,d);if(j){await loadA();toast(msg||'Done')}return j}
+function ad(id,a){const r=($('#ar')?.value||'').trim();if((a=='no'||a=='sus')&&r.length<5)return toast('Add a reason (min 5 characters)');
+if(a=='ver'&&![...document.querySelectorAll('.ck')].every(c=>c.checked))return toast('Complete the whole checklist to verify');
+if(a=='del'){if(!confirm('Delete this listing permanently?'))return;AL=null}aa('admin.listing',{id,op:a,note:r})}
+async function vd(id){const j=await api('admin.doc',{id});if(!j)return;const p=j.data.split(','),b=atob(p[1]),u=new Uint8Array(b.length);for(let i=0;i<b.length;i++)u[i]=b.charCodeAt(i);window.open(URL.createObjectURL(new Blob([u],{type:j.type})),'_blank')}
+const ub=id=>aa('admin.user',{id,op:'ban'}),ux=id=>{const u=A.us.find(x=>x.id==id);if(confirm('Delete '+u.email+' and all their data?'))aa('admin.user',{id,op:'del'})},arv=id=>{if(confirm('Remove this review?'))aa('admin.review.del',{id})},rx=(id,a)=>aa('admin.report',{id,op:a});
+function sb(e){e.preventDefault();aa('admin.banner',{text:new FormData(e.target).get('b')},'Saved')}
+function csv(n){const q=c=>'"'+String(c).replace(/^[=+\-@]/,"'$&").replace(/"/g,'""')+'"',rows=n=='l'?[['id','name','type','area','fee','status','verification','views']].concat(A.L.map(x=>[x.id,x.n,x.t,x.a,x.f,x.st,x.vs,x.views|0])):[['name','email','role','joined','banned']].concat(A.us.map(u=>[u.name,u.email,u.role,fd(u.created),u.ban?1:0])),a=document.createElement('a');a.href=URL.createObjectURL(new Blob([rows.map(r=>r.map(q).join(',')).join('\n')],{type:'text/csv'}));a.download=(n=='l'?'listings':'users')+'.csv';a.click()}
 
 function tg(id){const a=S.saved,i=a.indexOf(id);i<0?a.push(id):a.splice(i,1);save();toast(i<0?'Saved to My space':'Removed from saved');route(1)}
 function tc(id){const i=cmp.indexOf(id);if(i<0){if(cmp.length>=3){toast('You can compare up to 3');return route(1)}cmp.push(id)}else cmp.splice(i,1);bar();if(location.hash.startsWith('#/search'))res()}
 function bar(){$('#cb').innerHTML=cmp.length?`<div class="bar">${cmp.length} selected <a class="btn sm" href="#/compare">${I('git-compare','Compare')}</a><button class="btn sm alt" onclick="cmp=[];bar();route(1)">${I('x','Clear')}</button></div>`:'';ico()}
 function sh(id){const x=get(id),u=location.href;if(navigator.share)navigator.share({title:x.n+' on Sabaq',url:u}).catch(()=>{});else if(navigator.clipboard)navigator.clipboard.writeText(u).then(()=>toast('Link copied'),()=>toast(u));else toast(u)}
-function jg(id){if(!cu())return need('#/groups');const i=S.joined.indexOf(id);i<0?S.joined.push(id):S.joined.splice(i,1);save();route(1)}
-function ng(e){e.preventDefault();if(!cu())return need('#/groups');const d=Object.fromEntries(new FormData(e.target));S.gr.push({id:Date.now(),n:d.n,ex:d.ex,a:d.a,m:1});S.joined.push(S.gr[S.gr.length-1].id);save();toast('Group created');route(1)}
+
+
 function lang(){S.lang=S.lang=='en'?'ur':'en';save();route(1)}
 
 function links(){const h=location.hash.split('/')[1]||'',a=(p,i,k)=>`<a href="#/${p}" class="${h==p?'on':''}">${I(i)}${tx(k)}</a>`,u=cu(),n=unread();
@@ -357,8 +343,10 @@ $('#links').innerHTML=a('search','search','find')+a('tests','timer','tests')+a('
 function route(keep){const isA=/\/admin\/?$/.test(location.pathname);document.body.classList.toggle('adm',isA);document.documentElement.dir=S.lang=='ur'?'rtl':'ltr';
 if(isA){document.title='Admin – Sabaq';$('#app').innerHTML=admin();ico();return}
 document.title='Sabaq – Tutor & Academy Finder for Karachi';
+if(!S.ready){$('#app').innerHTML='<div class="w" style="padding:90px 0;text-align:center;color:var(--mut)" role="status">Loading…</div>';boot();return}
 const h=location.hash||'#/',y=scrollY,[,p,id]=h.split('/');$('#links').classList.remove('open');links();
-$('#bn').innerHTML=S.cf.banner?`<div class="bn">${I('megaphone')} ${esc(S.cf.banner)}</div>`:'';
+$('#bn').innerHTML=S.banner?`<div class="bn">${I('megaphone')} ${esc(S.banner)}</div>`:'';
+if(S.err){$('#app').innerHTML=`<section><div class="w" style="max-width:560px"><div class="note">${I('alert-triangle')}<span><b>The site could not load its data.</b> ${esc(S.err)}</span></div><p><button class="btn" onclick="S.ready=0;S.err='';route()">Try again</button></p></div></section>`;ico();return}
 $('#app').innerHTML=({'':home,search,p:()=>prof(id),compare:cmpv,match,fees,tests,resources:resrc,groups,safety,me:acct,login,join:()=>lform(0),edit:()=>lform(id),terms})[p||'']?.()??home();
 if(p=='search')res();bar();ico();scrollTo(0,keep?y:0)}
 
